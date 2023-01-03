@@ -6,7 +6,7 @@ import (
 	"github.com/joho/godotenv"
 	"github.com/tejas-cogo/go-cogoport/config"
 	"github.com/tejas-cogo/go-cogoport/routes"
-	"main/cmd"
+	"github.com/ChandelShikha/go-cogoport/cmd"
 )
 
 func main() {
