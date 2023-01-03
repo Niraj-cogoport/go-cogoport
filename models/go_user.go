@@ -6,6 +6,6 @@ import (
 
 type GoUser struct {
 	gorm.Model
-	ID   uint   `gorm:"primayKey", json:"id"`
-	Name string `gorm:""json:"name`
+	ID   uint   `gorm:"primayKey, json:id"`
+	Name string `gorm:"json:name"`
 }

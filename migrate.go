@@ -1,4 +1,4 @@
-package config
+package main
 
 import (
 	"fmt"
@@ -6,13 +6,12 @@ import (
 	"github.com/joho/godotenv"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
+	"github.com/tejas-cogo/go-cogoport/models"
+	"github.com/golang-migrate/migrate/v4"
 )
 
-var (
-	db *gorm.DB
-)
 
-func Connect() {
+func init() {
 	e := godotenv.Load()
 	if e != nil {
 		fmt.Print(e)
@@ -40,9 +39,8 @@ func Connect() {
 	if err != nil {
 		fmt.Print(err)
 	}
-	db = conn
+
+	conn.AutoMigrate(&models.Group{})
+
 }
 
-func GetDB() *gorm.DB {
-	return db
-}
