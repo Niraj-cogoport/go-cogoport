@@ -9,7 +9,7 @@ import (
 	"errors"
 	"context"
 	"text/template"
-	_"github.com/lib/pq"
+	_"gorm.io/driver/postgres"
 )
 
 type Migration struct {
