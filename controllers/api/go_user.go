@@ -6,8 +6,8 @@ import (
 	service "github.com/tejas-cogo/go-cogoport/services/api/users"
 )
 
-func UserList(c *gin.Context) {
-	c.JSON(200, service.UserList())
+func ListUser(c *gin.Context) {
+	c.JSON(200, service.ListUser())
 }
 
 func CreateUser(c *gin.Context) {
@@ -22,5 +22,11 @@ func DeleteUser(c *gin.Context) {
 }
 
 func UpdateUser(c *gin.Context) {
-	c.JSON(200, service.UpdateUser(c))
+	id := c.Request.URL.Query().Get("ID")
+	// var user models.GoUser
+	// var name string
+	// name = c.BindJSON(&user)
+	name := c.Request.URL.Query().Get("Name")
+
+	c.JSON(200, service.UpdateUser(id, name))
 }
