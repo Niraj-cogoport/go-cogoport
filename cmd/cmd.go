@@ -2,7 +2,6 @@ package cmd
 
 import (
 	"log"
-	"github.com/tejas-cogo/go-cogoport/config"
 	"github.com/spf13/cobra"
 )
 

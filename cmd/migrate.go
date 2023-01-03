@@ -3,8 +3,9 @@ package cmd
 import (
 	"fmt"
 	"github.com/tejas-cogo/go-cogoport/config"
-	"github.com/ChandelShikha/go-cogoport/migrations"
+	"github.com/tejas-cogo/go-cogoport/migrations"
 	"github.com/spf13/cobra"
+	"gorm.io/driver/postgres"
 )
 
 var migrateCmd = &cobra.Command{
