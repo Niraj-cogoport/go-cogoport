@@ -4,6 +4,7 @@ import (
 	"github.com/jinzhu/gorm"
 	"github.com/google/uuid"
 	"time"
+	
 )
 
 type GroupMember struct {
@@ -15,4 +16,8 @@ type GroupMember struct {
 	Status string
 	CreatedAt time.Time 
 	UpdatedAt time.Time 
+}
+
+func (gm *GroupMember) TableName() string {
+	return "group_member"
 }
