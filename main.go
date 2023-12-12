@@ -3,13 +3,15 @@ package main
 import (
 	"fmt"
 	"os"
-
 	"github.com/joho/godotenv"
 	"github.com/tejas-cogo/go-cogoport/config"
 	"github.com/tejas-cogo/go-cogoport/routes"
+	// "github.com/tejas-cogo/go-cogoport/cmd"
 )
 
 func main() {
+
+	// cmd.Execute()
 	e := godotenv.Load()
 
 	if e != nil {
